@@ -1,2 +1,6 @@
-<h1>Index</h1>
+<h1>Blog Posts</h1>
 <p>Rails material learned from https://www.youtube.com/watch?v=pPy0GQJLZUM</p>
+<% @posts.each do |post|%>
+<h3><%= post.title %></h3>
+<p><%= post.body %></p>
+<% end %>
