@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
     get 'new_post_path' => 'posts#new'
 
-    resources :posts
+    resources :posts do
+        resources :comments
+    end
 end
