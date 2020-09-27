@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+
+# lets a logged out user do anything but delete
+# http_basic_authenticate_with name: "admin", password: "admin", only: [:destory]
+
     def create
         @post = Post.find(params[:post_id])
         @comment = @post.comments.create(comment_params)

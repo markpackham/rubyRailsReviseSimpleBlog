@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+
+    # logged out user limited to viewing posts on homepage and on post specific page, no delete or edit powers
+    # http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
+
     def index
         @posts = Post.all
     end
